@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activity.MainActivity">
+
+    <ru.mrwinwon.poltindex.connection.util.WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!--TODO-->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="72dp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/iv_account_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:background="@mipmap/btn_profile" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/app_name"
+                    android:textSize="22sp" />
+
+                <ImageButton
+                    android:id="@+id/iv_language_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="18dp"
+                    android:background="@mipmap/russia" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_titles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_persons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="23dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_middle_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_second_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <ru.mrwinwon.poltindex.util.UnderlinedTextView
+                android:id="@+id/tv_today_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTitleScroll"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ed_search_person_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_anchor="@+id/ll_name">
+
+            <LinearLayout
+                android:id="@+id/ll_persons_rating_unlogged"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/ll_yesterday3"
+                    layout="@layout/progress_bar_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/ll_yesterday2"
+                    layout="@layout/progress_bar_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/ll_yesterday1"
+                    layout="@layout/progress_bar_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/ll_yesterday"
+                    layout="@layout/progress_bar_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/ll_today"
+                    layout="@layout/progress_bar_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/bottomsheet_sicial_login" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ru.mrwinwon.poltindex.ui.activity.AccountActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/lk_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/lk_toolbar_account_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/lk_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/app_name"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ru.mrwinwon.poltindex.util.UnderlinedTextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_smooth_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_smooth_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_defavatar"
+                    android:padding="100dp"
+                    android:src="@mipmap/icon_defavatar" />
+
+                <ImageButton
+                    android:id="@+id/ib_take_picture"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="17dp"
+                    android:layout_marginStart="21dp"
+                    android:background="@mipmap/btn_loadavatar" />
+
+                <ImageView
+                    android:id="@+id/iv_round_avatar"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="33dp"
+                    android:layout_marginTop="33dp" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/item_name_account"
+                layout="@layout/fragment_user_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/black" />
+
+            <include
+                android:id="@+id/item_email_account"
+                layout="@layout/fragment_user_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/black" />
+
+            <include
+                android:id="@+id/item_telegram_account"
+                layout="@layout/fragment_user_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/black" />
+
+            <include
+                android:id="@+id/item_profession_account"
+                layout="@layout/fragment_user_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/black" />
+
+            <include
+                android:id="@+id/item_birth_date_account"
+                layout="@layout/fragment_user_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_rating_item"
+    android:layout_height="90dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_date_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pb_rating_rl"
+        android:layout_alignStart="@id/pb_rating_rl"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@mipmap/icon_like_small" />
+
+        <TextView
+            android:id="@+id/tv_like_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/topRating"
+            android:textSize="9sp" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@mipmap/icon_dislike_small" />
+
+        <TextView
+            android:id="@+id/tv_dislike_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/topRating"
+            android:textSize="9sp" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@mipmap/icon_comment_small" />
+
+        <TextView
+            android:id="@+id/tv_comments_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/topRating"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_rating_rl"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="240dp"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toEndOf="@+id/tv_date_rating"
+        android:layout_toStartOf="@+id/iv_arrow_right_rating"
+        android:progressDrawable="@drawable/progressbar_rating_horizontal" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_right_rating"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@mipmap/icon_next" />
+
+    <View
+        android:id="@+id/view_vertical_line"
+        android:layout_width="3dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/pb_rating_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@color/gray_round_color" />
+
+    <TextView
+        android:id="@+id/tv_pi_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_vertical_line"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/sms_color"
+        android:textSize="14sp" />
+
+</RelativeLayout>

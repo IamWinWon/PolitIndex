@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.mrwinwon.poltindex.ui.activity.SearchPersonActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/iv_account_toolbar_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:background="@mipmap/btn_profile" />
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/app_name"
+                    android:textSize="22sp" />
+
+                <ImageButton
+                    android:id="@+id/iv_language_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="18dp"
+                    android:background="@mipmap/russia" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <EditText
+        android:id="@+id/ed_search_person_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBarLayout" />
+
+    <ListView
+        android:id="@+id/lv_person_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ed_search_person_search"
+        android:layout_below="@+id/ed_search_person_search"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>

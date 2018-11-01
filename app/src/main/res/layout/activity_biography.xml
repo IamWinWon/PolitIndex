@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ru.mrwinwon.poltindex.ui.activity.BiographyActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout_biography"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_biography"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:padding="15dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/iv_person_biography"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp" />
+
+        <TextView
+            android:id="@+id/tv_name_biography"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_person_biography"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_date_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name_biography"
+            android:layout_toEndOf="@+id/iv_person_biography"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp">
+
+        <TextView
+            android:id="@+id/tv_biography"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+    </ScrollView>
+
+</LinearLayout>

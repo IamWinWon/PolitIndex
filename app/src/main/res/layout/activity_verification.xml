@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.mrwinwon.poltindex.ui.activity.VerificationActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_verification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_toolbar_title_verification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/app_name"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:id="@+id/appbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="@dimen/appbar_padding_top"-->
+    <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar_verification"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/toolbar_title_verification"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="@string/app_name"-->
+    <!--android:textSize="22sp" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_marginTop="50dp"
+        android:paddingEnd="35dp"
+        android:paddingStart="35dp">
+
+        <TextView
+            android:id="@+id/tv_country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="+7" />
+
+        <EditText
+            android:id="@+id/ed_phone_number"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/tv_country_code"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="900 000 00 00"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ed_phone_number"
+            android:layout_below="@+id/ed_phone_number"
+            android:textColor="@color/gray_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_send_sms_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/ib_send_sms" />
+
+        <ImageButton
+            android:id="@+id/ib_send_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/btn_send" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_sms_info"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:paddingBottom="65dp"
+        android:paddingEnd="35dp"
+        android:paddingStart="35dp"
+        android:paddingTop="85dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_sms_edts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:id="@+id/et_sms_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dashGap="20dp"
+            android:hint=" "
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textColor="@color/sms_color"
+            android:textScaleX="1"
+            android:textSize="36sp" />
+
+        <EditText
+            android:id="@+id/et_sms_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dashGap="25dp"
+            android:hint=" "
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textColor="@color/sms_color"
+            android:textScaleX="1"
+            android:textSize="36sp" />
+
+        <EditText
+            android:id="@+id/et_sms_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dashGap="25dp"
+            android:hint=" "
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textColor="@color/sms_color"
+            android:textScaleX="1"
+            android:textSize="36sp" />
+
+        <EditText
+            android:id="@+id/et_sms_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dashGap="25dp"
+            android:hint=" "
+            android:inputType="phone"
+            android:maxLength="1"
+            android:textColor="@color/sms_color"
+            android:textScaleX="1"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <!--<EditText-->
+    <!--android:id="@+id/et_sms"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:textScaleX="38sp"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_below="@+id/linearLayout"-->
+    <!--android:inputType="phone"-->
+    <!--android:paddingBottom="65dp"-->
+    <!--android:paddingEnd="35dp"-->
+    <!--android:paddingStart="35dp"-->
+    <!--android:paddingTop="85dp"-->
+    <!--android:textSize="48sp"-->
+    <!--android:visibility="gone" />-->
+
+</RelativeLayout>
